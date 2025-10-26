@@ -1,5 +1,13 @@
-const cuadrado_de = null;
-const creaResta = null;
+const cuadrado_de = (x) => x * x;
+
+// aca hacemos uso del closure
+const creaResta = function(x){
+  return function(y){
+    return y - x;
+  }
+}
+
+
 const repeat = null;
 const printString = null;
 const howManyTimesAppear = null;
@@ -43,17 +51,21 @@ describe("ejercicio 4", () => {
     "Vettel",
   ];
   test("inciso a", () => {
-    const ejercicioA = null;
+    const ejercicioA = (nombre) => pilotos.indexOf(nombre) + 1;
     expect(ejercicioA("Russell")).toEqual(3);
   });
 
   test("inciso b", () => {
-    const ejercicioB = null;
+    const ejercicioB = (x) => pilotos.indexOf(x);
     expect(ejercicioB(6)).toEqual("Leclerc");
   });
 
   test("inciso c", () => {
-    const ejercicioC = null;
+    const ejercicioC = pilotos.map((piloto) => {
+      if (piloto.includes("a")) {
+        return piloto;
+      }
+  });
 
     expect(ejercicioC("a")).toEqual([
       "Verstappen",
