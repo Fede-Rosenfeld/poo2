@@ -8,8 +8,17 @@ const creaResta = function(x){
 }
 
 
-const repeat = null;
-const printString = null;
+// ejercicio 3
+
+const printString = n => "Execution Number: " + n;
+const repeat = (f, n) => {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(f(i));
+  }
+  return arr;
+};
+  
 const howManyTimesAppear = null;
 
 test("ejercicio 1", () => {
